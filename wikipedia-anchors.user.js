@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Wikipedia Anchors
-// @version      0.1
+// @version      0.2
 // @namespace    https://github.com/OoDeLally/wikipedia-anchors
 // @description  Add an anchored link to titles on Wikipedia articles
 // @author       Pascal Heitz
@@ -51,11 +51,7 @@ function insertBeforeLastIfPossible(containerNode, childNode) {
 
 
 function addLinkToHeader(header) {
-    var headlineSpan = header.querySelectorAll('span.mw-headline')[0];
-    if (!headlineSpan) {
-        return;
-    }
-    var headlineId = headlineSpan.id;
+    var headlineId = header.id;
     if (!headlineId) {
         return;
     }
